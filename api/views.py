@@ -1,7 +1,7 @@
 from django.db.models import Max
 from django_filters.rest_framework import DjangoFilterBackend
 
-from api.filters import ProductFilter
+from api.filters import ProductFilter, InStockFilterBackend
 from api.serializers import ProductSerializer, OrderSerializer, ProductInfoSerializer
 from api.models import Product, Order
 from rest_framework.response import Response
@@ -21,6 +21,7 @@ class ProductListCreateAPIView(generics.ListCreateAPIView):
         DjangoFilterBackend,
         filters.SearchFilter,
         filters.OrderingFilter,
+        InStockFilterBackend,
     ]
     search_fields = ['=name', 'description']
     ordering_fields = ['name', 'price', 'stock']
