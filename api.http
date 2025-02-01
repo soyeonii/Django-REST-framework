@@ -1,15 +1,13 @@
+###
 GET http://localhost:8000/products/ HTTP/1.1
 
 ###
-
 GET http://localhost:8000/products/2/ HTTP/1.1
 
 ###
-
 DELETE http://localhost:8000/products/2/ HTTP/1.1
 
 ###
-
 PUT http://localhost:8000/products/2/ HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2NzcyOTc4LCJpYXQiOjE3MzY3NzI2NzgsImp0aSI6IjQzYmZhMWVmZDVkNTQ5M2ZiN2MxYTJiMDJiMTg4ZDIwIiwidXNlcl9pZCI6MX0.5M08j6EIq0KrAoUoHDLmjZp_oA2r3ENb0z_1ShoFnxw
@@ -23,7 +21,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 }
 
 ###
-
 POST http://localhost:8000/products/ HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2NjkyNzg3LCJpYXQiOjE3MzY2OTI0ODcsImp0aSI6IjNlZDk2NmVmNTYzMDQyYWRhYWUxMjc0ZDBjMDQ5ZmMzIiwidXNlcl9pZCI6MX0.bLbQBoMvT22Dh3cYBvBugqFl_RHjvgqtedwwCCGMzoU
@@ -36,22 +33,19 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiY
 }
 
 ###
-
 POST http://localhost:8000/api/token/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "onion",
-  "password": "onion2132?"
+  "username": "admin",
+  "password": "midknight1!"
 }
 
 ###
-
 GET http://localhost:8000/user-orders/ HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM2NjkyNzg3LCJpYXQiOjE3MzY2OTI0ODcsImp0aSI6IjNlZDk2NmVmNTYzMDQyYWRhYWUxMjc0ZDBjMDQ5ZmMzIiwidXNlcl9pZCI6MX0.bLbQBoMvT22Dh3cYBvBugqFl_RHjvgqtedwwCCGMzoU
 
 ###
-
 POST http://localhost:8000/api/token/refresh/ HTTP/1.1
 Content-Type: application/json
 
@@ -60,6 +54,24 @@ Content-Type: application/json
 }
 
 ###
-
 GET http://localhost:8000/orders/31352a6b-46a7-4b85-a543-03ed7afb2421 HTTP/1.1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM4NDA4MjI0LCJpYXQiOjE3Mzg0MDc5MjQsImp0aSI6IjU5NGNjYTQ0MDlmODQzYzY4NjkyMzFhZGFjMTYxOTBkIiwidXNlcl9pZCI6Mn0._lSSi3whzcP9bc7eLiOAGeEWu9xNfxq_Q8l2Z1a8IlQ
+
+###
+POST http://localhost:8000/orders/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM4NDEyNTU3LCJpYXQiOjE3Mzg0MTIyNTcsImp0aSI6IjhhZWIzYTgxMmY1ZjRiNjhiNWMyY2NlZTMwM2FhMDBkIiwidXNlcl9pZCI6MX0.iyWffkoxcxLclbLPNgx0PpgZkw6QqJtAzEORPT3XuTw
+
+{
+  "status": "Pending",
+  "items": [
+    {
+      "product": 2,
+      "quantity": 2
+    },
+    {
+      "product": 3,
+      "quantity": 1
+    }
+  ]
+}
