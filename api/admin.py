@@ -1,8 +1,8 @@
 from django.contrib import admin
 
-from api.models import OrderItem, Order, User
+from api.models import Order, OrderItem, User
 
-# Register your models here.
+
 class OrderItemInline(admin.TabularInline):
     model = OrderItem
 
