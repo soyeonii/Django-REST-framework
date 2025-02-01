@@ -41,8 +41,8 @@ POST http://localhost:8000/api/token/ HTTP/1.1
 Content-Type: application/json
 
 {
-  "username": "admin",
-  "password": "midknight1!"
+  "username": "onion",
+  "password": "onion2132?"
 }
 
 ###
@@ -58,3 +58,8 @@ Content-Type: application/json
 {
   "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTczNjc3OTMwMCwiaWF0IjoxNzM2NjkyOTAwLCJqdGkiOiIwNTE1NzdkM2IwZDA0NzA4OWI3YjUzZGI3ZGE2OTgwNiIsInVzZXJfaWQiOjF9.hfmKDiX6f-P0u0AIttrYyKaz4QX4I7lPYB6vxROkfXk"
 }
+
+###
+
+GET http://localhost:8000/orders/31352a6b-46a7-4b85-a543-03ed7afb2421 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM4NDA4MjI0LCJpYXQiOjE3Mzg0MDc5MjQsImp0aSI6IjU5NGNjYTQ0MDlmODQzYzY4NjkyMzFhZGFjMTYxOTBkIiwidXNlcl9pZCI6Mn0._lSSi3whzcP9bc7eLiOAGeEWu9xNfxq_Q8l2Z1a8IlQ
